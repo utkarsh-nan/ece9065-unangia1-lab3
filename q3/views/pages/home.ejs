@@ -1,0 +1,78 @@
+<%-include('../partial/header')-%>
+<div class=" container">
+    <center>
+    <div class="card" style="width: fit-content;">
+        <div class="card-body">
+              </form>
+        </div>
+      </div>
+    </center>
+    <br>
+    <%if(data.length>0){%>
+        <center>
+        <div style="width:auto; border-style: solid;border-color: black;">
+        <table class="table table-border table-hover">
+            <thead class="bg-warning">
+                <tr>
+                    <th>
+                        s.no
+                    </th>
+                    <th>
+                        subject
+                    </th>
+                    <th>
+                        catalog_nbr
+                    </th>
+                    <th>
+                        Optional
+                    </th>
+                    <th>
+                        start_time
+                    </th>
+                    <th>
+                        end_time
+                    </th>
+                    <th>
+                        Days
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <%for(var i=0;i< data.length;i++){%>
+
+                <tr>
+                    <td>
+                        <%=i+1%>
+                    </td>
+                    <td>
+                     <%=data[i].subject%>
+                    </td>
+                    <td>
+                     <%=data[i].catalog_nbr%>
+                    </td>
+                    <td>
+                     <%=data[i].Optional%>
+                    </td>
+                    <td>
+                     <%=data[i].start_time%>
+                    </td>
+                    <td>
+                     <%=data[i].end_time%>
+                    </td>
+                    <td>
+                      <%=data[i].Days%>
+                    </td>
+                </tr>
+
+                <%}%>
+
+            </tbody>
+        </table>
+    </div>
+    </center>
+    <%}%>
+         
+    </div>
+
+<%-include('../partial/footer')-%>
